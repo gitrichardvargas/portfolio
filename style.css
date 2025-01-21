@@ -200,7 +200,7 @@ a:hover {
 }
 @media (max-width: 400px) {
     .section-container {
-        width: 400px;
+        width: 360px;
         height: 1200px; 
     }
 }
@@ -244,13 +244,21 @@ a:hover {
 
 @media (max-width: 400px) {
     .projects-container {
-        width: 380px;
+        width: 360px;
         height: 1000px; 
         padding: 0;
-        margin: 0; 
+        margin: 8px; 
+        padding-bottom: 60px;
     }
 }
 
+@media (max-width: 400px) {
+    @media (max-width: 400px) {
+    .carousel-item {
+       padding: 8px; 
+    }
+}
+}
 .projects-container h2 {
     font-size: 30px !important; 
     color: #003459; 
@@ -371,13 +379,24 @@ a:hover {
 .about-me {
     color: #dde5ed; 
     grid-area: about-me;
-    width: 80%;
+    /* width: 80%; */
     display: flex;
     align-items: center;
     justify-content: center;
     padding-bottom: 60px;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
+
+.my-info {
+    max-width: 80%;
+}
+ 
+@media (max-width: 600px) {
+    .my-info {
+        max-width: 65%;
+   
+    }
+
 
 .about-me h3 {
     color: #ffc82d;

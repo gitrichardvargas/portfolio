@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Carousel</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+        }
+        a {
+            color: #0051ba; /* University of Kansas blue */
+            font-weight: bold;
+            font-family: 'Arial', sans-serif; /* A softer sans-serif font */
+            text-decoration: none; /* Removes the underline */
+        }
+
+        a:hover {
+            text-decoration: underline; /* Optional: Adds underline on hover */
+        }
+
+        .tech-steps {
+            font-size: 0.85em; /* Reduces font size */
+            color: #2a3439; /* Gun metal grey */
+            font-family: 'Arial', sans-serif; /* Optional: Applies a clean sans-serif font */
+        }
+
+        .carousel-container {
+            width: 600px;
+            height: 700px;
+            position: relative;
+            padding: 20px; 
+            overflow: hidden;
+            text-align: center;
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin: 30px; 
+            overflow-y: auto; 
+            overflow-x: hidden;
+        }
+
+        .carousel-slides {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .carousel-item {
+            flex: 0 0 100%;
+            /* padding: 20px; */
+        }
+
+        .carousel-item h3 {
+            margin: 0 0 10px;
+            font-size: 1.5em;
+            /* color: #333; */
+            margin-left: 50px; 
+            margin-right: 50px; 
+        }
+
+        .carousel-item p {
+            margin: 0;
+            font-size: 1em;
+            color: #666;
+            margin-left: 50px; 
+            margin-right: 50px; 
+            padding: 5px; 
+        }
+
+        .carousel-arrow {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: #ddd;
+            border: none;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            outline: none;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+        .project-heading {
+            color: #e8000d !important;
+            font-weight: bold;
+            font-family: 'Georgia', serif;
+            text-align: center;
+        }
+
+        .acft-info {
+            font-size: 0.5rem !important; /* Adjust the font size to make it smaller */
+            font-family: 'Georgia', serif !important; /* Keeps the desired font */
+            text-align: center !important; /* Centers the text */
+            opacity: 0.8 !important; /* Reduces visibility subtly */
+            line-height: 1.2 !important; /* Improves readability for small text */
+            margin-top: 3px !important;
+            margin-left: 50px !important;
+            margin-right: 50px !important;
+        }
+
+
+
+        .carousel-arrow:hover {
+            background: #e8000d;
+        }
+
+        .carousel-arrow.left {
+            left: 10px;
+            color: #0051ba; 
+        }
+
+        .carousel-arrow.right {
+            right: 10px;
+            color: #0051ba; 
+        }
+
+        .carousel-arrow span {
+            font-size: 1.2em;
+            color: #333;
+            color: #0051ba; 
+        }
+    </style>
+</head>
+<body>
+    <div class="carousel-container">
+        <div class="carousel-slides">
+            <div class="carousel-item">
+                <h3 class="project-heading">PredTest</h3>
+                <p>An test driven developed R package, which I was the primary developer, is available for download with a 
+                    <a href="https://cran.r-project.org/web/packages/PredTest/vignettes/Getting-Started-with-PredTest.html">vignette</a> 
+                    on <a href="https://cran.r-project.org/web/packages/available_packages_by_name.html">CRAN</a>. My supervisor, Neal Montgomery, is one of 
+                    the authors of the novel statistical method and co-author of the PredTest package. I turned his ideas into open-source software. 
+                </p>
+                <br>
+                <p>
+                    R 
+                </p>
+                <br>
+                <p>
+                    Global hypothesis tests combine information across multiple endpoints to 
+                    test a single hypothesis. <a href="https://onlinelibrary.wiley.com/doi/full/10.1002/sim.8724">
+                    The prediction test</a> (Montgomery and Mahnken, 2020) is a recently proposed global hypothesis test with good 
+                    performance for small sample sizes and many endpoints of interest. The test is also flexible in 
+                    the types and combinations of expected results across the individual endpoints. This package 
+                    provides functions for data processing and calculation of the prediction test.</p>
+                </p>
+            </div>
+            <div class="carousel-item">
+                <h3 class="project-heading">Army Combat Fitness Test (ACFT) Calculator Android/iOS App</h3>
+                <p>Stage one of an Android and iOS application to quickly aquire an individual Army Combat Fitness Test Score for any age, 
+                    gender, or alternative cardio event.  The ACFT is the US Army's metric for the readniness of soldiers based on their physical fitness.
+                </p>
+                <br>
+                <p>
+                    Python, JavaScript, ReactNative
+                </p>
+                <br>
+                <!-- screen grab from  -->
+                <div>
+                    <video controls width="100%" style="max-width: 100px; margin: 0 auto; display: block;">
+                        <source src="videos/acft_app_recording.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                <br>
+                <p>
+                    I used Python to clean all possible scores from multiple Excel files, created an easy to filter JSON file 
+                    containing over 55,000 rows of data, unit tested the model in Python, then converted it to JavaScript to quickly 
+                    develop an Android and iOS App in ReactNative. The current version uses a subclass of the original model for the 
+                    calculations. I plan to update the app using SQLite to allow leaders to not only easily calculate individual scores,
+                    but store and email entire unit's soldiers data in an Excel file to track unit physical readniness. 
+                </p>
+                <br>
+                <!-- this will be an optional section. User can click to expand to see screen grab or learn more about the acft
+                needs to have divs toggle from the option to expanded form to show all of the optional content  -->
+                <div> 
+                    <!-- ACFT info -->
+                    <div class="acft-info">
+                        The ACFT consists of six events: three-rep max deadlift, the standing power throw of a 10 lbs 
+                        medicine ball, hand release pushups in two minutes, the sprint drag carry timed obstacle, 
+                        timed plank, and the two mile run, which can be replaced with alternative cardiovascular, 
+                        such as biking, swimmng, rowing, and walking. There are different scales based on age and gender 
+                        for the scoring of the ACFT. A max score is 600 and soldiers must pass with at least 60 points 
+                        in each event
+                    </div>
+                </div>
+                
+            </div>
+            <div class="carousel-item">
+                <h3 class="project-heading">Dashboard</h3>
+                <p>Coming Soon!</p>
+            </div>
+        </div>
+        <button class="carousel-arrow left" onclick="moveSlide(-1)">
+            <span>&#8249;</span>
+        </button>
+        <button class="carousel-arrow right" onclick="moveSlide(1)">
+            <span>&#8250;</span>
+        </button>
+    </div>
+
+    <script>
+        let currentSlide = 0;
+
+        function moveSlide(direction) {
+            const slides = document.querySelector('.carousel-slides');
+            const totalSlides = slides.children.length;
+
+            currentSlide = (currentSlide + direction + totalSlides) % totalSlides;
+            const offset = -currentSlide * 100;
+
+            slides.style.transform = `translateX(${offset}%)`;
+        }
+    </script>
+</body>
+</html>

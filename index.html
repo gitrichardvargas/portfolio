@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Richard Vargas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <span class="section-link"><a href="#projects">PROJECTS</a></span>
+        <span class="section-link"><a href="#about">ABOUT</a></span>
+        <span class="section-link"><a href="#contact">CONTACT</a></span>
+    </nav>
+    <div class="section-container">
+        <div class="intro">
+            <div class="intro-text">
+                <h1>Richard Vargas</h1>
+                <p>
+                    Biostatistics Graduate Research Assistant
+                    <br>
+                    with a Passion for Data-Focused Software Development
+                </p>
+            </div>
+        </div>
+        <div id="projects" class="projects-container">
+            <h2 class="proj-title">Professional and Personal Projects</h2>
+            <div class="carousel-slides">
+                <div class="carousel-item">
+                    <h3 class="project-heading">PredTest</h3>
+                    <p>An test driven developed R package, which I was the primary developer, is available for download with a 
+                        <a href="https://cran.r-project.org/web/packages/PredTest/vignettes/Getting-Started-with-PredTest.html">vignette</a> 
+                        on <a href="https://cran.r-project.org/web/packages/available_packages_by_name.html">CRAN</a>. My supervisor, Neal Montgomery, is one of 
+                        the authors of the novel statistical method and co-author of the PredTest package. I turned his ideas into open-source software. 
+                    </p>
+                    <br>
+                    <p>
+                        <img width="30" src="images/r.png">
+                    </p>
+                    <br>
+                    <p>
+                        Global hypothesis tests combine information across multiple endpoints to 
+                        test a single hypothesis. <a href="https://onlinelibrary.wiley.com/doi/full/10.1002/sim.8724">
+                        The prediction test</a> (Montgomery and Mahnken, 2020) is a recently proposed global hypothesis test with good 
+                        performance for small sample sizes and many endpoints of interest. The test is also flexible in 
+                        the types and combinations of expected results across the individual endpoints. This package 
+                        provides functions for data processing and calculation of the prediction test.
+                    </p>
+                </div>
+                <div class="carousel-item">
+                    <h3 class="project-heading">Army Combat Fitness Test (ACFT) Calculator Android/iOS App</h3>
+                    <p>Stage one of an Android and iOS application to quickly aquire an individual Army Combat Fitness Test Score for any age, 
+                        gender, or alternative cardio event. The ACFT is the US Army's metric for the readiness of soldiers based on their physical fitness.
+                    </p>
+                    <br>
+                    <p>
+                        <img width="30" src="images/python.png"> <img width="30" src="images/js.png"> <img width="30" src="images/react.png">
+                    </p>
+                    <br>
+                    <div><div class="click">Click to View</div>
+                        <video controls width="100%" style="max-width: 100px; margin: 0 auto; display: block;">
+                            <source src="videos/acft_app_recording.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                    <br>
+                    <p>
+                        I used Python to clean all possible scores from multiple Excel files, created an easy to filter JSON file 
+                        containing over 55,000 rows of data, unit tested the model in Python, then converted it to JavaScript to quickly 
+                        develop an Android and iOS App in ReactNative. The current version uses a subclass of the original model for the 
+                        calculations. I plan to update the app using SQLite to allow leaders to not only easily calculate individual scores,
+                        but store and email entire unit's soldiers data in an Excel file to track unit physical readiness.
+                    </p>
+                    <br>
+                    <div>
+                        <div class="acft-info">
+                            The ACFT consists of six events: three-rep max deadlift, the standing power throw of a 10 lbs 
+                            medicine ball, hand release pushups in two minutes, the sprint drag carry timed obstacle, 
+                            timed plank, and the two mile run, which can be replaced with alternative cardiovascular, 
+                            such as biking, swimming, rowing, and walking. There are different scales based on age and gender 
+                            for the scoring of the ACFT. A max score is 600 and soldiers must pass with at least 60 points 
+                            in each event.
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <h3 class="project-heading">Dashboard</h3>
+                    <p>Coming Soon!</p>
+                </div>
+            </div>
+            <button class="carousel-arrow left" onclick="moveSlide(-1)">
+                <span>&#8249;</span>
+            </button>
+            <button class="carousel-arrow right" onclick="moveSlide(1)">
+                <span>&#8250;</span>
+            </button>
+        </div>
+        
+    </div>
+    <div id="about">
+        <div class="my-photo"><img id="me" src="images/kumc_pic.jpg"></div>
+        <div class="about-me">
+            <div class="my-info"> 
+                <h3>Education</h3>
+                MS Biostatistics, Univeristy of Kansas Medical Center (Expected Graduation July 2025 and available to work by June)
+                <h3>Experience</h3>
+                As an English teacher in Wuhan, China, I developed a passion for programming and mathematics, building a web app 
+                to automate tasks. After serving in the US Army, I pursued an MS in Biostatistics at the University of 
+                Kansas Medical Center, where I now work as a Graduate Research Assistant, gaining experience in statistical software 
+                development, data cleaning, and applied and theoretical statistics.
+                <h3>Technologies</h3>
+                Python, R, JavaScript
+                <h4>Working knowledge of:</h4>
+                SAS, SQL, MATLAB, PHP, CSS, HTML
+                <h3>Languages</h3>
+                Spanish (literate first-generation heritage speaker), Chinese and Portuguese (intermediate speaking, writing, and reading)  
+            </div>
+        </div>
+    </div>
+    <div id="contact">
+        <div class="contact-info"></div>
+            <h2>CONTACT ME</h2> 
+            <p><a href="https://github.com/gitrichardvargas"><img width="30" src="images/github.png"></a>gitrichardvargas</p>
+            <p><img width="30" src="images/whatsapp.png"> +1 (785) 844-2714</p>
+            <p><img width="30" src="images/email.png"> emailrichardvargas@gmail.com</p>
+            <p><a href="https://www.linkedin.com/in/william-richard-vargas/"></a><img width="30" src="images/linkedin.png"> william-richard-vargas</p>
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>

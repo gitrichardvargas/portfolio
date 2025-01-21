@@ -177,7 +177,7 @@ a:hover {
     flex-direction: column;
     align-items: center;
     width: 100%;
-    box-shadow: 10px 10px 10px black;
+    /* box-shadow: 10px 10px 10px black; */
 }
 @media (max-width: 500px) {
     .section-container {
@@ -255,7 +255,8 @@ a:hover {
 @media (max-width: 400px) {
     @media (max-width: 400px) {
     .carousel-item {
-       padding: 8px; 
+       padding-top: 8px; 
+       padding-bottom: 8px; 
     }
 }
 }
@@ -364,22 +365,32 @@ a:hover {
     display: grid;
     grid-template-columns: 1fr 2fr;
     grid-template-areas: "my-photo about-me";
+    border-radius: 30px;
+    box-shadow: 10px 10px 10px black;
+    max-width: 98%;
 }
 
 .my-photo {
     display: flex;
     align-items: center;
     justify-content: center;
+    border-radius: 30px;
 }
 
 #me {
     max-width: 200px;
 }
 
+@media (max-width: 600px) {
+    .my-photo {
+        padding-top: 30px;
+    }
+}
+
 .about-me {
     color: #dde5ed; 
     grid-area: about-me;
-    /* width: 80%; */
+    max-width: 95%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -396,7 +407,7 @@ a:hover {
         max-width: 65%;
    
     }
-
+}
 
 .about-me h3 {
     color: #ffc82d;
@@ -405,23 +416,35 @@ a:hover {
     color:#e8000d;
 }
 #contact {
-    padding: 200px; 
     font-size: larger;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    max-width: 95%;
+    /* width: 500px;  */
+    height: 600px; 
+    padding: 40px; 
+    margin: 30px; 
+    background-color: #E3E7EE; 
+    border-radius: 30px;
+    box-shadow: 10px 10px 10px black;
+    align-items: center;
 }
 
-#contact {
-    color: #dde5ed; 
-    
-}
-#contact h2{
-    color:#DCF2FC; 
+#contact h2 {
+    color: #e8000d; 
 }
 
+@media (max-width: 600px) {
+    #constact h2{
+       font-size: xx-small;
+    }
+}
 
 #contact img {
     vertical-align: middle;
     margin-bottom: -3px; 
 }
+
+
 
 /* Responsive Design */
 @media screen and (max-width: 520px) {
@@ -441,7 +464,7 @@ a:hover {
         text-align: center;
         margin: 5px; 
         font-size: .7rem;
-   
+        
     }
 
     .my-photo {
@@ -463,4 +486,4 @@ a:hover {
         max-width: 150px; 
         margin-bottom: 10px; 
     }
-}
+}; 

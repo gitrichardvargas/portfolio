@@ -10,7 +10,7 @@ if (/Chrome/.test(navigator.userAgent) && /Google Inc/.test(navigator.vendor)) {
     }
 
     window.addEventListener('resize', adjustPadding);
-    adjustPadding(); // Set initial padding based on current width
+    adjustPadding(); 
 }
 
 
